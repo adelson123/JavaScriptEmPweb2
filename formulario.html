@@ -9,6 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <style>
     body {
       background-color: white;
@@ -20,7 +21,7 @@
       -o-background-size: cover;
     }
   </style>
-  <title>Hello, world!</title>
+  <title>Cadastro de Alunos</title>
 </head>
 
 <body>
@@ -29,45 +30,56 @@
       <div class="col-sm-2">
 
       </div>
-      <div class="col-sm-8"  style="background-color: white;">
+      <div class="col-sm-8" style="background-color: white;">
         <form>
           <br>
-          <h3 class="text-center">Cadastro de Alunos</h3>
+          <h3 class="text-center"><i class="fas fa-paw"> </i> Cadastro de Alunos <i class="fas fa-paw"> </i></h3>
           <br>
           <div class="form-group">
-            <label for="nome">Nome</label>
+            <label for="nome"><i class="fas fa-angle-right"></i> Nome</label>
             <input type="text" class="form-control" id="nome" placeholder="Example: Adelson Wictor">
             <small id="nomeErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email"><i class="fas fa-angle-right"></i> Email</label>
             <input type="email" class="form-control" id="email" placeholder="Ex.: eu100jesusnaosounada@gmail.com">
             <small id="emailErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password"><i class="fas fa-angle-right"></i> Password</label>
             <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
             <small id="senhaErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="form-group">
-            <label for="repPassword">Repetir senha</label>
+            <label for="repPassword"><i class="fas fa-angle-right"></i> Repetir Password</label>
             <input type="password" class="form-control" id="repPassword" placeholder="Repita sua senha">
             <small id="repSenhaErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="row">
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label>Módulo</label>
-                    <select class="form-control">
-                      <option>Primeiro</option>
-                      <option>Segundo</option>
-                      <option selected>Terceiro</option>
-                    </select>
-                </div>
+            <div class="col-sm-5">
+              <div class="form-group">
+                <label><i class="fas fa-angle-right"></i> Módulo</label>
+                <select class="form-control">
+                  <option>Primeiro</option>
+                  <option>Segundo</option>
+                  <option>Terceiro</option>
+                </select>
+              </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <br><br>
+          <div class="form-group">
+            <label><i class="fas fa-angle-right"></i> Preferências</label><br>
+            <input type="checkbox" id="redes" class="mr-1"><label for="redes">Redes</label><br>
+            <input type="checkbox" id="programacao" class="mr-1"><label for="programacao">Programação</label><br>
+            <input type="checkbox" id="manutencao" class="mr-1"><label for="manutencao">Montagem e manutenção de
+              Computadores</label>
+          </div>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary mr-2" style="font-size:18px;">Salvar <i
+                class="fas fa-pray"></i> <i class="fas fa-bible"></i></button>
+            <button type="reset" class="btn btn-danger" style="font-size:18px;">Limpar <i
+                class="fas fa-trash"></i></button>
+          </div>
         </form>
       </div>
       <div class="col-sm-2">
