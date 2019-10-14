@@ -1,47 +1,83 @@
-function verificarNome(){
+function verificarNome() {
     var nome = document.getElementById("nome").value;
     var nomeErro = document.getElementById("nomeErro");
-    if(nome == "" || nome.length<3){
-        nomeErro.innerHTML="name necessity minimin three character!";
+    if (nome == "" || nome.length < 3) {
+        nomeErro.innerHTML = "name necessity minimin three character!";
+        return false;
+
     }
-    else{
-        nomeErro.innerHTML="";
+    else {
+        nomeErro.innerHTML = "";
+        return true;
     }
 }
 
-function verificarEmail(){
+function verificarEmail() {
     var email = document.getElementById("email").value;
     var emailErro = document.getElementById("emailErro");
-  if(email == "" || email.indexOf('@')==-1||email.indexOf('.')==-1){
-      emailErro.innerHTML="This e-mail is invalid!!!";
-  }
-  else{
-      emailErro.innerHTML="";
-  }
+    if (email == "" || email.indexOf('@') == -1 || email.indexOf('.') == -1) {
+        emailErro.innerHTML = "This e-mail is invalid!!!";
+        return false;
+    }
+    else {
+        emailErro.innerHTML = "";
+        return true;
+    }
 
 }
 
-function verificarPassword(){
+function verificarPassword() {
     var password = document.getElementById("password").value;
     var passwordErro = document.getElementById("passwordErro")
-    if(password == "" || password.length<=6){
-        passwordErro.innerHTML="This password is invalid!";
+    if (password == "" || password.length <= 6) {
+        passwordErro.innerHTML = "This password is invalid!";
+        return false;
     }
-    else{
-        passwordErro.innerHTML="";
+    else {
+        passwordErro.innerHTML = "";
+        return true;
     }
 }
 
-function verificarRepetirPassword(){
+function verificarRepetirPassword() {
     var password = document.getElementById("password").value;
     var repPassword = document.getElementById("repPassword").value;
     var repSenhaErro = document.getElementById("repSenhaErro");
-    if(password != repSenhaErro){
-        repSenhaErro.innerHTML="This password is diferent!";
+    if (password != repPassword) {
+        repSenhaErro.innerHTML = "This password is diferent!";
+        return false;
     }
-    else{
-        alert("chegou aqui")
-        repSenhaErro.innerHTML="";
+    else {
+        repSenhaErro.innerHTML = "";
+        return true;
     }
+
 }
 
+function verificarPreferencia() {
+    var preferencia = document.getElementById("redes");
+    var preferencia2 = document.getElementById("programacao");
+    var preferencia3 = document.getElementById("manutencao");
+    var preferenciaErro = document.getElementById("preferenciaErro");
+    if (preferencia.checked || preferencia2.checked || preferencia3.checked) {
+        preferenciaErro.innerHTML = "";
+        return true;
+    }
+
+    else {
+        preferenciaErro.innerHTML = "Escolha no mínimo uma opção!"
+        return false;
+    }
+
+}
+
+function verificarTodosOsCampos() {
+    return verificarNome() && verificarEmail() && verificarPassword() &&  verificarRepetirPassword() && 
+    verificarPreferencia();
+}
+
+function mostrarMensagemEnviada(){
+    if(verificarTodosOsCampos()){
+        alert("Enviado com sucesso!");
+    }
+}

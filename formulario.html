@@ -32,7 +32,7 @@
 
       </div>
       <div class="col-sm-8" style="background-color: white;">
-        <form>
+        <form onsubmit="return verificarTodosOsCampos()">
           <br>
           <h3 class="text-center"><i class="fas fa-paw"> </i> Cadastro de Alunos <i class="fas fa-paw"> </i></h3>
           <br>
@@ -70,12 +70,13 @@
           </div>
           <div class="form-group">
             <label><i class="fas fa-angle-right"></i> Preferências</label><br>
-            <input type="checkbox" id="redes" class="mr-1"><label for="redes">Redes</label><br>
-            <input type="checkbox" id="programacao" class="mr-1"><label for="programacao">Programação</label><br>
-            <input type="checkbox" id="manutencao" class="mr-1"><label for="manutencao">Montagem e manutenção</label>
+            <input type="checkbox" onclick="verificarPreferencia()" id="redes" class="mr-1"><label for="redes">Redes</label><br>
+            <input type="checkbox" onclick="verificarPreferencia()" id="programacao" class="mr-1"><label for="programacao">Programação</label><br>
+            <input type="checkbox" onclick="verificarPreferencia()" id="manutencao" class="mr-1"><label for="manutencao">Montagem e manutenção</label>
+            <small id="preferenciaErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="form-group text-center">
-            <button type="submit" class="btn btn-primary mr-2" style="font-size:18px;">Salvar <i
+            <button onclick="mostrarMensagemEnviada()" type="submit" class="btn btn-primary mr-2" style="font-size:18px;">Salvar <i
                 class="fas fa-pray"></i> <i class="fas fa-bible"></i></button>
             <button type="reset" class="btn btn-danger" style="font-size:18px;">Limpar <i
                 class="fas fa-trash"></i></button>
