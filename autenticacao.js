@@ -2,7 +2,7 @@ function verificarNome() {
     var nome = document.getElementById("nome").value;
     var nomeErro = document.getElementById("nomeErro");
     if (nome == "" || nome.length < 3) {
-        nomeErro.innerHTML = "name necessity minimin three character!";
+        nomeErro.innerHTML = "Name must be at least three characters!";
         return false;
 
     }
@@ -43,8 +43,8 @@ function verificarRepetirPassword() {
     var password = document.getElementById("password").value;
     var repPassword = document.getElementById("repPassword").value;
     var repSenhaErro = document.getElementById("repSenhaErro");
-    if (password != repPassword) {
-        repSenhaErro.innerHTML = "This password is diferent!";
+    if (repPassword.length < 1 || password != repPassword) {
+        repSenhaErro.innerHTML = "This password is different!";
         return false;
     }
     else {
@@ -65,7 +65,7 @@ function verificarPreferencia() {
     }
 
     else {
-        preferenciaErro.innerHTML = "Escolha no mínimo uma opção!"
+        preferenciaErro.innerHTML = "Choose at least one option!"
         return false;
     }
 
@@ -78,6 +78,6 @@ function verificarTodosOsCampos() {
 
 function mostrarMensagemEnviada(){
     if(verificarTodosOsCampos()){
-        alert("Enviado com sucesso!");
+        alert("Sent with success!");
     }
 }
