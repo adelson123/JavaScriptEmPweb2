@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="autenticacao.js"></script>
   <style>
     body {
       background-color: white;
@@ -37,22 +38,22 @@
           <br>
           <div class="form-group">
             <label for="nome"><i class="fas fa-angle-right"></i> Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Example: Adelson Wictor">
+            <input onkeyup="verificarNome()" type="text" class="form-control" id="nome" placeholder="Example: Adelson Wictor">
             <small id="nomeErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="form-group">
             <label for="email"><i class="fas fa-angle-right"></i> Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Ex.: eu100jesusnaosounada@gmail.com">
+            <input onkeyup="verificarEmail()" type="email" class="form-control" id="email" placeholder="Ex.: arquiteclíneo@arisoluzia.com">
             <small id="emailErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="form-group">
             <label for="password"><i class="fas fa-angle-right"></i> Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Digite sua senha">
-            <small id="senhaErro" class="form-text text-muted" style="color: red !important;"></small>
+            <input onkeyup="verificarPassword()" type="password" class="form-control" id="password" placeholder="Digite sua senha">
+            <small id="passwordErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="form-group">
             <label for="repPassword"><i class="fas fa-angle-right"></i> Repetir Password</label>
-            <input type="password" class="form-control" id="repPassword" placeholder="Repita sua senha">
+            <input onkeyup="verificarRepetirPassword()" type="password" class="form-control" id="repPassword" placeholder="Repita sua senha">
             <small id="repSenhaErro" class="form-text text-muted" style="color: red !important;"></small>
           </div>
           <div class="row">
