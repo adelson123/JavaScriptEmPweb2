@@ -1,0 +1,77 @@
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+        <input type="text" id="numero" />
+        <input type="submit" id="adivinhar" value="Compare com o meu segredo!"/>
+
+    <script>
+
+        //   alert("podemos fazer mais com JavaScript);//
+       
+
+        //println do JAVA
+       //document.write("Minha idade é: ");
+       //document.write(21);
+       
+        //DECLARANDO UMA VARIÁVEL
+      // var ano = 2012;
+       //CONCATENANDO VARIÁVEL
+      // document.write("<h1>Eu nasci em : " + (ano - 25) + "<br></h1>");
+
+        //DECLARANDO UMA FUNÇÃO
+      function mostra(frase){
+         document.write(frase + "<br>");
+      };
+
+      /*CHAMANDO A FUNÇÃO
+      var ano = 2012;
+      mostra("Eu nasci em : " + (ano - 25));
+        */
+     /*  console.log("esta mensagem aparece apenas no log");
+
+       var nome = prompt("Bom dia! Qual é o seu nome?");
+       document.write("Bem vindo, " + nome);
+
+       var idade = prompt(nome + ", quantos anos você tem?");
+       document.write(nome + " tem " + idade +" anos.");
+       */
+
+      /* var vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?");
+       var empates = prompt("Quantos jogos o CDC Futebol Clube empatou?");
+        var pontos = (parseInt(vitorias) * 3) + parseInt(empates);
+        if(pontos > 42){
+            mostra("O CDC futebol clube não será rebaixado!");
+        }
+        else{
+            mostra("Lamento informar, mas acho que o CDC futebol clube será rebaixado!");
+        }
+        */
+
+        /*ESTRUTURA DE REPETIÇÃO USANDO O WHILE
+
+        var anoDeCopa = 1930;
+        while(anoDeCopa <= 2022){
+            alert(anoDeCopa + " tem copa!");
+            anoDeCopa = anoDeCopa + 4;
+        }
+        */
+
+       /* var numero = 7;
+        for(var multiplicador = 1 ; multiplicador <= 10; multiplicador++){
+            mostra(multiplicador * numero);
+        }
+        */
+        
+        var caixaDoNumero = document.getElementById("numero");
+        var botaoAdvinhar = document.getElementById("adivinhar");
+        var botaoClicado = function (){
+            alert(caixaDoNumero.value);
+        }
+        botaoAdvinhar.onclick = botaoClicado;
+
+
+        </script>
+
+
